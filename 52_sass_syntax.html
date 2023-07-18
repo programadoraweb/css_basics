@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sass Syntax</title>
+  </head>
+  <body>
+    <h1>Sass Syntax</h1>
+    <ol>
+      <li>Nesting Selectors is allowed</li>
+      <p> Sass</p>
+      <p>
+        <kbd>
+          nav ul margin: 0 padding: 0 list-style: none li display: inline-block
+          a display: block padding: 6px 12px text-decoration: none
+        </kbd>
+      </p>
+      <p>
+        <p>css </p>
+        <kbd>
+          nav ul { margin: 0; padding: 0; list-style: none; } nav li { display:
+          inline-block; } nav a { display: block; padding: 6px 12px;
+          text-decoration: none; }
+        </kbd>
+      </p>
+      <li>&__ or &-- or & , replaces the Parent Selector</li>
+      <p><p> sass syntax </p><kbd>
+      .accordion { background: #f4f4f4 &__copy background: #646464
+      </kbd></p>
+        <p> Css Syntax </p>
+        <kbd>
+          .accordion { background: #f4f4f4; } .accordion__copy { background:
+          #646464 }
+        </kbd>
+      </p>
+      <li>@Mixins & @include (resusable css)</li>
+      <p>
+        @mixin is used to set the style & @include to call/apply that style to
+        an element
+      </p>
+      <p>
+        <p>sass</p>
+        <kbd
+          >@mixin button { display: inline-block; text-decoration: none;
+          padding: 5em 7em; background-color: azure; &:hover { background-color:
+          brown; } } .button { @include button; }</kbd
+        >
+      </p>
+      <p>
+        <p>css</p>
+        <kbd
+          >.button { display: inline-block; text-decoration: none; padding: 5em
+          7em; background-color: azure; } .button:hover { background-color:
+          brown; }</kbd
+        >
+      </p>
+      <li>@for loop (for to x for through)</li>
+      <p>
+        <p>sass</p>
+        <kbd>
+          @for $i from 1 through 3 ul:nth-child(3n + #{$i}) background-color:
+          lighten($base-color, $i * 5%)
+        </kbd>
+      </p>
+      <p>
+        <p>css</p>
+        <kbd>
+          ul:nth-child(3n + 1) { background-color: #004080; } ul:nth-child(3n +
+          2) { background-color: #004d99; } ul:nth-child(3n + 3) {
+          background-color: #0059b3; }
+        </kbd>
+      </p>
+<li>@if / @else if & @ else</li>
+   <p>
+You can include @if / @else if /@else statements inside your mixin declaration
+      </p>
+<li>@while (loop)</li>
+   <p> 
+        <kbd>
+$i: 1;
+@while $i < 6 {
+  .text-#{$x} { font-size: 15px * $i;}
+  $i: $i + 1;
+}
+             
+             
+<p class="text-1">Hello</p>
+<p class="text-2">Hello</p>
+<p class="text-3">Hello</p>
+<p class="text-4">Hello</p>
+<p class="text-5">Hello</p>
+        </kbd>
+<p>
+      <li>@each loop (its like mapping)</li>
+      <p>
+        <p>sass</p>
+        <kbd>
+          $sizes: 40px, 50px, 80px 
+          @each $size in $sizes
+          .icon-#{$size}
+          font-size: $size height: $size width: $size
+        </kbd>
+      </p>
+      <p>
+        <p>scss</p><kbd>
+          .icon-40px { font-size: 40px; height: 40px; width: 40px; } .icon-50px
+          { font-size: 50px; height: 50px; width: 50px; } .icon-80px {
+          font-size: 80px; height: 80px; width: 80px; }
+        </kbd>
+      </p>
+ <li>@extend (reuse an existing class from another element)</li>
+     <p>
+        <kbd>
+          .btn{
+          background-color: red;
+          }
+          .p{
+          estend .btn;
+          color: black;
+          }
+        </kbd>
+      </p>
+    </ol>
+  </body>
+</html>
