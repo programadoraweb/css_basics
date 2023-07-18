@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Size</title>
+
+    <style>
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        font-size: 2.1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <kbd> html { font-size: 62.5%; } body { font-size: 2.1rem; } </kbd>
+      <p><strong>EM</strong>is related/addapts to the father size</p>
+      <p>
+        <strong>REM</strong>is related to the rood size (html font-size) &
+        addapts to the user system.
+      </p>
+      <p>browser font size basis = 16px</p>
+      <p>16 px = 1 rem</p>
+      <p>i.e. with grid areas 
+        <strong>VH</strong>Viewport Height
+      </p>
+      <p>i.e. with grid areas 
+        <strong>VW</strong>Viewport Width
+      </p>
+    </div>
+
+    <h1>Best Sizes:</h1>
+    <ol>
+      <li>
+        font-size <strong>rem</strong
+        ><small> - dont forget to define 62.5% @ html & 2.1 rem @ body</small>
+      </li>
+      <li>
+        padding <strong>em</strong>
+        <small></small>
+          - if you change the parent font size, it will adjunt
+          automatically</small
+        >
+      </li>
+      <li>
+        margin <strong>rem</strong
+        ><small> - taking under consideration html font size 62.5%</small>
+      </li>
+      <li>
+        ch <strong>rem</strong>
+        <small> - used to set max width on a paragraph: max-width: 45ch</small>
+      </li>
+      <li>font-weight <strong>400, 500, etc.</strong></li>
+      <li>
+        text-shaddow <strong>em</strong
+        ><small> - so it grows with the text or get smaller with it.</small>
+      </li>
+      <li>media queries <strong>em</strong></li>
+      <li>box-shaddow<strong>px</strong></li>
+      <li>
+        height <strong>Do you really need to set a height ? </strong>
+        <small> - you could have an overflow on small devices</small>
+      </li>
+    </ol>
+
+    <p>If needed, you can use <strong>calc()</strong> and combine different measurement units</p>
+  </body>
+</html>
