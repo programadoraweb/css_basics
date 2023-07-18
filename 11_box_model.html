@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Box Model</title>
+    <style>
+      .bg {
+        background-color: teal;
+      }
+      .first {
+        width: 50px;
+        height: 50px;
+        padding: 20px;
+        margin: 20px;
+        border: 5px solid blue;
+        background-color: coral;
+        box-sizing: content-box;
+      }
+      .second {
+        width: 50px;
+        height: 50px;
+        padding: 20px;
+        margin: 0px;
+        border: 5px solid blue;
+        background-color: coral;
+        box-sizing: content-box;
+      }
+      .third {
+        width: 50px;
+        height: 50px;
+        padding: 0px;
+        margin: 20px;
+        border: 5px solid blue;
+        background-color: coral;
+        box-sizing: content-box;
+      }
+      .fourth {
+        width: 50px;
+        height: 50px;
+        padding: 0px;
+        margin: 0px;
+        border: 5px solid blue;
+        background-color: coral;
+        box-sizing: content-box;
+      }
+      .firstA {
+        width: 50px;
+        height: 50px;
+        padding: 20px;
+        margin: 20px;
+        border: 5px solid blue;
+        background-color: coral;
+        box-sizing: border-box;
+      }
+      .secondB {
+        width: 50px;
+        height: 50px;
+        padding: 20px;
+        margin: 0px;
+        border: 5px solid blue;
+        background-color: coral;
+        box-sizing: border-box;
+      }
+      .thirdC {
+        width: 50px;
+        height: 50px;
+        padding: 0px;
+        margin: 20px;
+        border: 5px solid blue;
+        background-color: coral;
+        box-sizing: border-box;
+      }
+      .fourthD {
+        width: 50px;
+        height: 50px;
+        padding: 0px;
+        margin: 0px;
+        border: 5px solid blue;
+        background-color: coral;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: row; -ms-flex-align: center">
+      <div class="bg">
+        <h1>Box- Sizing: Content-box (default)</h1>
+        <p>Margin - border - padding</p>
+        <div class="first">Lorem Lorem Lorem</div>
+        <div class="second">Lorem Lorem Lorem</div>
+        <div class="third">Lorem Lorem Lorem</div>
+        <div class="fourth">Lorem Lorem Lorem</div>
+      </div>
+      <hr />
+      <div class="bg">
+        <h1>Box- Sizing: Border-box</h1>
+        <p>Margin - border - padding</p>
+        <div class="firstA">Lorem Lorem Lorem</div>
+        <div class="secondB">Lorem Lorem Lorem</div>
+        <div class="thirdC">Lorem Lorem Lorem</div>
+        <div class="fourthD">Lorem Lorem Lorem</div>
+      </div>
+    </div>
+  </body>
+</html>
