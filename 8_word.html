@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word</title>
+    <style>
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        font-size: 2.1rem;
+      }
+      .spacing60 {
+        word-spacing: 60px;
+      }
+      .spacing3 {
+        word-spacing: 3px;
+      }
+
+      .spacingNeg7 {
+        word-spacing: -7px;
+      }
+      .word-wrap {
+        width: 200px;
+        word-wrap: break-word;
+        border: 2px solid seagreen;
+      }
+      .word-break {
+        width: 200px;
+        border: 2px solid seagreen;
+        word-break: break-all;
+        /* word-break: break-word; */
+        /* word-break: keep-all; */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Word Spacing</h1>
+    <div class="word-spacing">
+      <p class="spacing60">
+        <strong> word-spacing: 60px </strong> Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Laboriosam deserunt illo atque sit
+        temporibus Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Laboriosam deserunt ils Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Laboriosam deserunt ilesse totam. Velit, voluptatum
+        neque!
+      </p>
+      <p class="spacing3">
+        <strong>word-spacing: 3px </strong> et consectetur adipisicing elit.
+        Laboriosam deserunt ils Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Laboriosam deserunt ilesse totam. Velit, voluptatum n
+      </p>
+      <p class="spacingNeg7">
+        <strong> word-spacing: -7px </strong>et consectetur adipisicing elit.
+        Laboriosam deserunt ils Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Laboriosam deserunt ilesse totam. Velit, voluptatum n
+      </p>
+    </div>
+    <h1>Word Wrap</h1>
+    <div class="word-wrap">
+      <p>
+        averyveryverylargewordthatdoesnotfitintothediv one two three four five
+        six seven eight one two three four five six
+        wordwrapbrakwordisbreakingthewordeveniftherearenospaces
+      </p>
+    </div>
+    <h1>Word Break</h1>
+    <div class="word-break">
+      <p>
+        averyveryverylargewordthatdoesnotfitintothediv one two three four five
+        six seven eight one two three four five six
+        wordwrapbrakwordisbreakingthewordeveniftherearenospaces
+      </p>
+    </div>
+  </body>
+</html>
