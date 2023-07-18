@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display</title>
+    <style>
+      .border {
+        border: 2px blue solid;
+      }
+      .inline-block {
+        display: inline-block;
+        width: 100px;
+      }
+      .inline {
+        display: inline;
+      }
+      .styled-span {
+        display: inline-block;
+        width: 100%;
+        height: 20%;
+        border: 2px blue solid;
+      }
+      .display-none {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="border">paragraph is a display <strong>block element</strong></p>
+    <span class="border"
+      >span is a display <strong>inline element</strong></span
+    >
+    <br />
+    <p class="border inline-block">
+      This is a paragraph. You can convert a block element into an
+      <strong>inline-block element</strong>
+    </p>
+    <div class="border inline">
+      this is a div. You can convert a block element into an
+      <strong>inline element </strong>
+    </div>
+
+    <h3>
+      With Display-Inline-Block you can add width and height, whereas with
+      Display- Inline it will always take by default the minimum width.
+    </h3>
+    <p>height, margin and padding have no impact on inline elements</p>
+    <h3>
+      IF you want to style an inline element eg. span, you need to make it a
+      display-inline-block.
+    </h3>
+    <span class="styled-span"
+      >This is a styled span transformed into a
+      <strong>inline-block element</strong></span
+    >
+
+    <p>Below there is a div with display-none:</p>
+    <div class="display-none">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad reiciendis,
+        fugit ipsum facilis hic magni explicabo adipisci doloremque omnis
+        dolorem inventore quae eaque! Architecto aut explicabo maxime voluptas!
+        Numquam, in?
+      </p>
+    </div>
+
+    <p>
+      <strong>display flex</strong>affects the inner value of the box. The
+      outter value is display block.
+    </p>
+    <p>
+      If you want to affect the outside value of the box you need to do a:
+      <strong>display: inline-flex</strong>
+    </p>
+  </body>
+</html>
