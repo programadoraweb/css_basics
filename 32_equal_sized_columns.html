@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox -Equal sized Columns</title>
+    <style>
+      .parent {
+        background-color: lightslategray;
+        display: flex;
+        height: 300px;
+      }
+      .child {
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+        border: 3px solid royalblue;
+        margin: 2px;
+      }
+      .one,
+      .two,
+      .three,
+      .four {
+        border: 1px solid blue;
+        flex-basis: 33%; /* ideal flexible width */
+        flex-shrink: 1;
+        flex-grow: 1;
+      }
+      .oneA {
+        border: 1px solid salmon;
+        flex-basis: 50%;
+        flex-shrink: 0;
+        flex-grow: 1;
+        background-color: lightskyblue;
+      }
+      .middle {
+        flex: 0 1 60%;
+        background-color: lightskyblue;
+        border: 1px solid salmon;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Equal sized Columns</h1>
+    <div class="parent">
+      <div class="child one">#1</div>
+      <div class="child two">#2</div>
+      <div class="child three">#3</div>
+      <div class="child four">#4</div>
+    </div>
+
+    <h1>First Column 50%</h1>
+    <div class="parent">
+      <div class="child oneA">#1</div>
+      <div class="child two">#2</div>
+      <div class="child three">#3</div>
+      <div class="child four">#4</div>
+    </div>
+
+    <h1>Middle Column will always take 60%</h1>
+    <div class="parent">
+      <div class="child one">#1</div>
+      <div class="child two">#2</div>
+      <div class="child middle">#2</div>
+      <div class="child three">#3</div>
+      <div class="child four">#4</div>
+    </div>
+  </body>
+</html>
