@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Layout</title>
+    <style>
+      .nav {
+        display: flex;
+        width: 100%;
+        background-color: #fff;
+        border-bottom: 2px solid #ccc;
+        box-sizing: border-box;
+        padding: 10px 20px;
+        margin-bottom: 40px;
+      }
+
+      .logo {
+        text-decoration: none;
+        color: #000;
+        font-size: 20px;
+        font-weight: bold;
+        flex-basis: 200px;
+        flex-grow: 1;
+        flex-shrink: 0;
+      }
+
+      .nav-buttons {
+        text-align: right;
+        flex-basis: 50%;
+        flex-grow: 1;
+        flex-shrink: 1;
+      }
+
+      .nav-buttons a {
+        text-decoration: none;
+        color: #000;
+        font-size: 15px;
+        display: inline-block;
+        padding: 5px;
+        margin: 0 5px;
+      }
+
+      .body {
+        display: flex;
+        margin-bottom: 40px;
+      }
+
+      .left-column,
+      .center-column,
+      .right-column {
+        border: 3px solid #ccc;
+        flex: 1 1 33%;
+        padding: 0 20px;
+      }
+
+      .center-column {
+        flex-basis: 50%;
+        flex-shrink: 0;
+      }
+
+      .footer {
+        display: flex;
+        background-color: #111;
+        justify-content: space-around;
+        color: #fff;
+        padding: 50px 0;
+      }
+
+      .footer div {
+        flex-basis: 20%;
+        border: 1px solid teal;
+      }
+
+      @media (max-width: 700px) {
+        .body,
+        .footer {
+          flex-wrap: wrap;
+        }
+
+        .footer div {
+          flex-basis: 50%;
+          flex-shrink: 0;
+          flex-grow: 0;
+          border: 1px solid white;
+          margin-bottom: 10px;
+        }
+
+        .left-column,
+        .center-column,
+        .right-column {
+          flex-basis: 100%;
+          flex-shrink: 0;
+        }
+
+        .center-column {
+          order: 1;
+        }
+        .left-column {
+          order: 2;
+        }
+        .right-column {
+          order: 3;
+        }
+
+        .right-column {
+          display: none;
+        }
+
+        .right-column {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="/" class="logo"> Your Logo here </a>
+
+      <div class="nav-buttons">
+        <button><a href="/register">Sign Up</a></button>
+        <button><a href="/login">Login</a></button>
+      </div>
+    </nav>
+
+    <main class="body">
+      <aside class="left-column">
+        <p>
+          <strong> Left colum</strong> Lorem, ipsum dolor sit amet consectetur
+          adipisicing elit. Ratione ducimus mollitia sunt itaque, suscipit
+          facere sequi repudiandae magni quos laborum sint aspernatur tempora
+          doloribus provident doloremque, commodi aliquid labore voluptates!
+        </p>
+      </aside>
+      <div class="center-column">
+        <strong>middle div</strong>
+      </div>
+      <section class="right-column">
+        <p>
+          <strong>Section</strong>LoreItaque dignissimos, dicta est vitae
+          laboriosam ducimus deleniti cum totam eaque doloribus inventore culpa
+          quasi omnis amet. Sint libero quaerat molestiae eaqum ipsum dolor, sit
+          amet consectetur adipisicing elit. e.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>Column 1</div>
+      <div>Column 2</div>
+      <div>Column 3</div>
+      <div>Column 4</div>
+    </footer>
+
+    <p style="margin: 20px">extra info in here</p>
+  </body>
+</html>
