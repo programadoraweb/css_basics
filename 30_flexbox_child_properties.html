@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Child Properties</title>
+    <style>
+      .parent {
+        background-color: lightslategray;
+        display: flex;
+        height: 300px;
+      }
+      .child {
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+        border: 3px solid royalblue;
+        margin: 20px;
+      }
+      .child-noheight {
+        width: 100px;
+        background-color: pink;
+        border: 3px solid royalblue;
+        margin: 20px;
+      }
+      .one {
+        order: 3;
+        /*   -1 will get any element on the beggining */
+      }
+      .two {
+        order: 4;
+      }
+      .three {
+        order: 2;
+      }
+      .four {
+        order: 1;
+      }
+      .flex-start {
+        align-self: flex-start;
+      }
+      .flex-end {
+        align-self: flex-end;
+      }
+      .center {
+        align-self: center;
+      }
+      .baseline {
+        align-self: baseline;
+      }
+      .stretch {
+        align-self: stretch;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .flex-basis-100per {
+        flex-basis: 100%;
+      }
+      .flex-basis-50per {
+        flex-basis: 50%;
+      }
+      .flex-basis-30per {
+        flex-basis: 30%;
+      }
+      .flex-basis-auto {
+        flex-basis: auto;
+        /* the default */
+      }
+      .grow {
+        /* flex-grow: 0; */ /* it is not allowed to grow  */
+        flex-grow: 1; /* it is allowed to grow if there is extra space */
+        /* how fast the div will grow */
+      }
+      .shrink {
+        flex-shrink: 1; /* it is allowed to shirink if there is the need */
+        /* how fast the div will shrink */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Child Properties:</h1>
+    <ol>
+      <li>order</li>
+      <ol>
+        <li>row</li>
+        <li>column</li>
+        <li>row reverse</li>
+        <li>column reverse</li>
+      </ol>
+      <li>
+        flex-basis
+        <small
+          >- how much room ideally the dive should take, if there is available
+          space</small
+        >
+      </li>
+      <ol>
+        <li>flex-basis 100%</li>
+        <li>flex-basis 50%</li>
+        <li>flex-basis 30%</li>
+      </ol>
+      <li>flex-grow</li>
+      <li>flex-shrink</li>
+      <li>align-self</li>
+      <ol>
+        <li>flex-start</li>
+        <li>flex-end</li>
+        <li>center</li>
+        <li>baseline</li>
+        <li>stretch</li>
+      </ol>
+    </ol>
+
+    <h2>Order</h2>
+    <div class="parent">
+      <div class="child one">#1</div>
+      <div class="child two">#2</div>
+      <div class="child three">#3</div>
+      <div class="child four">#4</div>
+    </div>
+    <h2>Flex-basis</h2>
+    <p>each child needs to go wrapped into a parent</p>
+    <div class="parent">
+      <div class="child flex-basis-100per">100%</div>
+    </div>
+    <div class="parent">
+      <div class="child flex-basis-50per">50%</div>
+    </div>
+    <div class="parent">
+      <div class="child flex-basis-30per">30%</div>
+    </div>
+    <div class="parent">
+      <div class="child flex-basis-auto">auto/default</div>
+    </div>
+    <h2>Flex-grow</h2>
+    <div class="parent">
+      <div class="child flex-basis-100per grow">100%</div>
+    </div>
+    <div class="parent">
+      <div class="child flex-basis-50per grow">50%</div>
+    </div>
+    <div class="parent">
+      <div class="child flex-basis-30per grow">30%</div>
+    </div>
+    <div class="parent">
+      <div class="child flex-basis-auto grow">auto/default</div>
+    </div>
+
+    <h2>Flex-shrink</h2>
+    <div class="parent">
+      <div class="child flex-basis-100per shrink">100%</div>
+    </div>
+    <div class="parent">
+      <div class="child flex-basis-50per shrink">50%</div>
+    </div>
+    <div class="parent">
+      <div class="child flex-basis-100per shrink">100%</div>
+    </div>
+    <div class="parent">
+      <div class="child flex-basis-auto shrink">auto/default</div>
+    </div>
+    <h2>Align-self</h2>
+    <div class="parent">
+      <div class="child flex-start"></div>
+      <div class="child flex-end"></div>
+      <div class="child center"></div>
+      <div class="child baseline"></div>
+      <div class="child-noheight stretch"></div>
+    </div>
+
+    <!-- 
+      
+Flex: 0 1 auto // is the default (0 grow, 1 shrink & basis auto)
+Flex: none // (0 grow, 0 shrink & auto) not flexible, it wont grow
+Flex: auto // (1grow, 1 shrink & basis auto) it is totally flexible
+Flex: number// (number grow, 0 shrink &  basis auto) used to apply proportions
+-->
+  </body>
+</html>
