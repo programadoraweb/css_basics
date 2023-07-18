@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      thead {
+        background-color: #bbb;
+      }
+
+      tfoot {
+        background-color: #ccc;
+      }
+
+      thead th {
+        border-bottom: 1px solid #ccc;
+      }
+
+      tfoot th {
+        border-top: 1px solid #ccc;
+      }
+      table td {
+        font-size: 13px;
+        text-align: center;
+        padding: 5px;
+        height: 30px;
+      }
+
+      table tbody td {
+        text-transform: lowercase;
+      }
+
+      table tbody tr:hover {
+        background-color: #ccc;
+      }
+
+      table tbody tr:hover td:hover {
+        background-color: #333;
+        color: white;
+      }
+
+      .top {
+        vertical-align: top;
+      }
+      .center {
+        vertical-align: center;
+      }
+      .bottom {
+        vertical-align: bottom;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Table</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="top">1 TOP</td>
+          <td class="center">Your Name CENTER</td>
+          <td class="bottom">@mail.com BOTTOM</td>
+          <td>Age</td>
+        </tr>
+        <tr>
+          <td class="top">2 TOP</td>
+          <td class="center">Your Name CENTER</td>
+          <td class="bottom">@mail.com BOTTOM</td>
+          <td>Age</td>
+        </tr>
+        <tr>
+          <td class="top">3 TOP</td>
+          <td class="center">Your Name CENTER</td>
+          <td class="bottom">@mail.com BOTTOM</td>
+          <td>Age</td>
+        </tr>
+        <tr>
+          <td class="top">4 TOP</td>
+          <td class="center">Your Name CENTER</td>
+          <td class="bottom">@mail.com</td>
+          <td>Age</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th class="top">User ID</th>
+          <th class="center">Name CENTER</th>
+          <th class="bottom">Email</th>
+          <th>Age</th>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
