@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <title>Fonts</title>
+    <style>
+      /*  @font-face{
+			font-family: importedFontName;
+			src: url(xxx.ttf);
+			} */
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        font-size: 2.1rem;
+      }
+      .serif {
+        font-family: Times;
+        font-size: 40px;
+      }
+
+      .sans-serif {
+        font-family: Arial;
+        font-size: 40px;
+      }
+      .weight-100 {
+        font-weight: 100;
+        font-size: 30px;
+      }
+      .weight-400 {
+        font-weight: 400;
+        font-size: 30px;
+      }
+      .weight-900 {
+        font-weight: 900;
+        font-size: 30px;
+      }
+      .initial {
+        font-style: initial; /*  or none */
+        font-size: 30px;
+      }
+      .oblique {
+        font-style: oblique;
+        font-size: 30px;
+      }
+      .italic {
+        font-style: italic;
+        font-size: 30px;
+      }
+      .general {
+        font-size: 30px;
+      }
+      .small-caps {
+        font-variant: small-caps;
+        font-size: 30px;
+      }
+      .external-font {
+        font-family: 'Roboto', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="font-family">
+      <p class="serif">FONT FAMILY SERIF TIMES</p>
+      <p class="sans-serif">FONT FAMILY SANS SERIF ARIAL</p>
+    </div>
+    <div class="font-size">
+      <p>Better to use em</p>
+    </div>
+    <div class="font-weight">
+      <p class="weight-100">Font Weight</p>
+      <p class="weight-400">Font Weight</p>
+      <p class="weight-900">Font Weight</p>
+    </div>
+    <div class="font-style">
+      <p class="initial">Font Style Initial</p>
+      <p class="oblique">Font Style Oblique</p>
+      <p class="italic">Font Style Italic</p>
+    </div>
+    <div class="font-variant">
+      <p class="general">
+        Font Variant Small Caps
+        <span class="small-caps">Font Variant Small Caps</span> Font Variant
+        Small Caps Lock
+      </p>
+    </div>
+    <div class="external-font">
+      <p>External Google Font</p>
+    </div>
+
+    <div>
+      <h1 style="font-family: times">Accent Font for the Title</h1>
+      <p style="font-family: arial">
+        sans-serif to read the paragraph
+        <span style="font-family: cursive"
+          >a third font as accent font, eg. coursive.
+        </span>
+      </p>
+    </div>
+
+    <!-- always have different font colors for h1-h6 & paragraphs  with contrast, so it will be easier to read. -->
+  </body>
+</html>
