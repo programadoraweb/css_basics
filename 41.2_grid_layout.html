@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout</title>
+    <style>
+      body {
+        background-color: lightgray;
+      }
+      .parent {
+        display: grid;
+        min-height: 100vh;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 1rem;
+      }
+
+      .child {
+        display: grid;
+        height: 100%;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 2rem;
+        background-color: cadetblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .small {
+        grid-row: span 1;
+        grid-column: span 1;
+      }
+      .medium {
+        grid-row: span 2;
+        grid-column: span 2;
+      }
+      .large {
+        grid-row: span 3;
+        grid-column: span 3;
+      }
+      .tall {
+        grid-row: span 3;
+        grid-column: span 2;
+      }
+      .wide {
+        grid-row: span 2;
+        grid-column: span 3;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="parent">
+        <div class="child medium">1st child</div>
+        <div class="child large">2nd child</div>
+        <div class="child medium">3rd child</div>
+        <div class="child small">4th child</div>
+        <div class="child tall">5th child</div>
+        <div class="child wide">6th child</div>
+        <div class="child wide">7th child</div>
+        <div class="child medium">8th child</div>
+      </div>
+    </main>
+  </body>
+</html>

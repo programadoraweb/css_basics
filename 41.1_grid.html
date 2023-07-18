@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      main {
+        /* 1- father  */
+        display: grid;
+        grid-template-rows: repeat(6, 100px); /*  6 rows with 100px each */
+        grid-template-rows: 50vh auto 2fr; /* auto means that it will take as much space as it can  */
+        grid-template-rows: min-content auto; /* fit the content in the minimum space possible  */
+        grid-template-columns: repeat(6, 100px);
+        grid-template-columns: repeat(
+          autofit,
+          100px
+        ); /* will fit depending on the number of boxes/children  */
+        grid-template-areas: x x x;
+        grid-template-columns: 1.5em minmax(400px, 650px) minmax(200px, 350px) 1.5em;
+        grid-gap: 2em;
+        grid-template-rows: 300px;
+        grid-template-columns: 300px;
+        grid-auto-flow: column; /* dont create any rows, only columns  */
+        grid-auto-flow: row; /* dont create any columns, only rows  */
+        grid-auto-columns: 2fr; /* columns will be automatically created with that space  */
+        grid-auto-rows: 2fr; /* rows will be automatically created with that space  */
+        /* father  */
+
+        /* 2- child  */
+        grid-column: span 2;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row: 3 span 2; /* starts at line 3 and span 2  */
+        grid-row-start: 2;
+        column-gap: 1em;
+        row-gap: 1em;
+        /* child  */
+
+        /*  3.1-  naming rows and collums  */
+        grid-template-rows: [first-row] 1fr [middle-row] 80vh [last-row] 2fr;
+        /* we can name columns and rows, so them we can call them by name  [first-row] */
+        /* fr stands for fraction = the remaining space */
+        grid-template-columns: [first-column] 50vh [middle-column] 5em [last-column] 1fr;
+
+        grid-column: first-colum / last-column;
+        /*   naming rows and collums  */
+
+        /*  3.2-  naming rows and collums  */
+        grid-template-areas: 'header' 'main' 'footer'; /* on the parent element  */
+        /* footer {grid-area:footer} */
+        /*  3.2-  naming rows and collums  */
+
+        /* 4.1-  when you will use a grid inside another grid sytem and you want to inherit the size of the outer one  */
+        display: grid;
+        grid-template-columns: inherit;
+        /* when you will use a grid inside another grid sytem and you want to inherit the size of the outer one  */
+
+        /*  4.2- when you will use a grid inside another grid sytem and you want to inherit the size of the outer one  */
+        display: grid;
+        grid-template-columns: subgrid;
+        /* when you will use a grid inside another grid sytem and you want to inherit the size of the outer one  */
+        /*   5-   bellow an example of overlaping grids 
+        .div1, .div2{
+            grid-row: 1/2;
+        }
+        .div1{
+            grid-colum: 1/3;
+        };
+        .div2{
+            grid-colum: 2/-1;
+        } */
+
+        /*     grid & flexbox go well allong, so you can use flex and or its properties   */
+        align-items: center;
+        /*     grid & flexbox go well allong, so you can use flex and or its properties   */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grid - Parent Properties</h1>
+    <ol>
+      <li><strong>display: grid</strong></li>
+      <li><strong>grid-template-rows: repeat(6, 100px);</strong></li>
+      <li>
+        <strong
+          >grid-template-columns: 1.5em minmax(400px, 650px) minmax(200px,
+          350px) 1.5em;</strong
+        >
+      </li>
+      <li><strong> grid-template-areas: 'header' 'main' 'footer';</strong></li>
+      <li>
+        <strong>
+          grid-template-rows: [first-row] 1fr [middle-row] 80vh [last-row] 2fr;
+        </strong>
+      </li>
+      <li><strong> grid-auto-flow: column;</strong></li>
+      <li><strong> grid-auto-rows: 2fr;</strong></li>
+      <li><strong> grid-auto-columns: 2fr;</strong></li>
+      <li><strong> grid-gap</strong></li>
+      <li><strong> justify-items</strong></li>
+      <li><strong> align-items</strong></li>
+      <li><strong> place-items</strong></li>
+      <li><strong> justify-content</strong></li>
+      <li><strong> align-content</strong></li>
+      <li><strong> place-content</strong></li>
+    </ol>
+
+    <h1>Grid - Child Properties</h1>
+    <ol>
+      <li><strong>grid-column: span 2</strong></li>
+      <li><strong>grid-row: 3 span 2;</strong></li>
+      <li><strong>grid-column-start: 3;</strong></li>
+      <li><strong>grid-column-end: 3;</strong></li>
+      <li><strong> grid-row-start: 2;</strong></li>
+      <li><strong> grid-row-end: 2;</strong></li>
+      <li><strong> column-gap: 1em;</strong></li>
+      <li><strong> row-gap: 1em;</strong></li>
+      <li><strong> grid-area: header;;</strong></li>
+      <li><strong> justify-self</strong></li>
+      <li><strong> align-self</strong></li>
+      <li><strong> place-self;</strong></li>
+    </ol>
+    <p>Grid & Flexbox go well together.</p>
+  </body>
+</html>

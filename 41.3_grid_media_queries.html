@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Media Queries</title>
+
+    <style>
+      .father {
+        display: grid;
+        grid-template-columns: 1em 2fr 1em;
+        grid-template-areas: 'header header header' '... main ...' ' ... side ...' 'footer footer footer';
+        background-color: blue;
+        margin: 5em auto;
+        grid-gap: 2em;
+        padding: 1em;
+      }
+      .child {
+        min-height: 10vh;
+        padding: 1em;
+        margin: 1em;
+      }
+      .header {
+        grid-column: header;
+        background-color: lightseagreen;
+      }
+      .main {
+        grid-area: main;
+        background-color: lightslategrey;
+      }
+      .sidebar {
+        grid-area: side;
+        background-color: lime;
+      }
+      .footer {
+        grid-area: footer;
+        background-color: lightcoral;
+      }
+      @media only screen and (min-width: 700px) {
+        .father {
+          grid-template-columns: 1.5em minmax(400px, 500px) minmax(200px, 350px) 1.5em;
+          grid-template-areas:
+            'header header header  header'
+            ' ... main side ...'
+            'footer footer footer footer ';
+          background-color: pink;
+        }
+      }
+      @media only screen and (min-width: 1024px) {
+        .father {
+          grid-template-columns: minmax(1.5em, 1fr) minmax(650px, 960px) minmax(
+              1.5em,
+              1fr
+            );
+          grid-template-areas:
+            'header header header'
+            ' main side ...'
+            'footer footer footer ';
+          background-color: saddlebrown;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father">
+      <div class="child header">header</div>
+      <div class="child main">main</div>
+      <div class="child sidebar">sidebar</div>
+      <div class="child footer">footer</div>
+    </div>
+  </body>
+</html>
