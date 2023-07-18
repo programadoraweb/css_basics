@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <title>Bootstrap 5.0</title>
+
+    <style>
+      /*   
+      All we need to know is on the nice well written documentatio!
+      1. get the cdn @ https://getbootstrap.com/docs/5.0/getting-started/introduction/
+      2. on Utilities we can see the attributes that we can use for each element on its calls to style things such as color, borders, flex, etc
+      3. on  Layout and on Components you can  have basis layout that you will just need to customize with the utilities properties*/
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Disabled</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="//unsplash.it/g/300/300" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="//unsplash.it/g/300/300" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="//unsplash.it/g/300/300" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+    </div>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Link</li>
+      </ol>
+    </nav>
+    <div class="container px-4">
+      <div class="row gx-5">
+        <div class="col">
+          <div class="p-3 border bg-light">
+            Custom column padding voluptates! Praesentium, officia animi.
+            Officia ullam aspernatur ad cupiditate! Ullam odit aliquam autem
+            consequatur? Lorem ipsum dolor sit, amet consectetur advoluptate
+            deserunt tempora voluptates quis cumque veritatis? Natus nobis enim
+            consectetur porro! Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Harum mollitia eveniet ea. Natus culpa, laboriosam
+            facere est perspiciatis suscipit soluta iste corporis sint impedit
+            reprehenderit expedita perferendis fugiat non tenetur. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Molestiae eaque, harum
+            ipsam consequatur dignissimos, tempore quasi recusandae iste hic
+            explicabo doloreDelectus eaque distinctio et similique? Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Pariatur consequatur,
+            sit, consequuntur dolorvoluptate deserunt tempora voluptates quis
+            cumque veritatis? Natus nobis enim consectetur porro! Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Harum mollitia eveniet
+            ea. Natus culpa, laboriosam facere est perspiciatis suscipit soluta
+            iste corporis sint impedit reprehenderit expedita perferendis fugiat
+            non tenetur. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Molestiae eaque, harum ipsam consequatur dignissimos, tempore
+            quasi recusandae iste hic explicabo doloreipsum dolor, sit amet
+            consectetur adipisicing elit. Harum mollitia eveniet ea. Natus
+            culpa, laboriosam facere est voluptate deserunt tempora voluptates
+            quis cumque veritatis? Natus nobis enim consectetur porro! Lorem
+            ipsum dolor, sit amet consectetur adipisicing elit. Harum mollitia
+            eveniet ea. Natus culpa, laboriosam facere est perspiciatis suscipit
+            soluta iste corporis sint impedit reprehenderit expedita perferendis
+            fugiat non tenetur. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Molestiae eaque, harum ipsam consequaturvoluptate
+            deserunt tempora voluptates quis cumque veritatis? Natus nobis enim
+            consectetur porro! Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Harum mollitia eveniet ea. Natus culpa, laboriosam
+            facere est perspiciatis suscipit soluta iste corporis sint impedit
+            reprehenderit expedita perferendis fugiat non tenetur. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Molestiae eaque, harum
+            ipsam consequatur dignissimos, tempore quasi recusandae iste hic
+            explicabo dolore dignissimos, tempore quasi recusandae iste hic
+            explicabo dolore
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+              similique quis quisquam quidem ex vero veritatis voluptates!
+              Praesentium, officia animi. Officia ullam aspernatur ad
+              cupiditate! Ullam odit aliquam autem consequatur? Lorem ipsum
+              dolor sit, amet consectetur advoluptate deserunt tempora
+              voluptates quis cumque veritatis? Natus nobis enim consectetur
+              porro! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Harum mollitia eveniet ea. Natus culpa, laboriosam facere est
+              perspiciatis suscipit soluta iste corporis sint impedit
+              reprehenderit expedita perferendis fugiat non tenetur. Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Molestiae eaque,
+              harum ipsam consequatur dignissimos, tempore quasi recusandae iste
+              hic explicabo doloreDelectus eaque distinctio et similique? Lorem
+              ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
+              consequatur, sit, consequuntur dolorvoluptate deserunt tempora
+              voluptates quis cumque veritatis? Natus nobis enim consectetur
+              porro! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Harum mollitia eveniet ea. Natus culpa, laboriosam facere est
+              perspiciatis suscipit soluta iste corporis sint impedit
+              reprehenderit expedita perferendis fugiat non tenetur. Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Molestiae eaque,
+              harum ipsam consequatur dignissimos, tempore quasi recusandae iste
+              hic explicabo doloreipsum dolor, sit amet consectetur adipisicing
+              elit. Harum mollitia eveniet ea. Natus culpa, laboriosam facere
+              est voluptate deserunt tempora voluptates quis cumque veritatis?
+              Natus nobis enim consectetur porro! Lorem ipsum dolor, sit amet
+              consectetur adipisicing elit. Harum mollitia eveniet ea. Natus
+              culpa, laboriosam facere est perspiciatis suscipit soluta iste
+              corporis sint impedit reprehenderit expedita perferendis fugiat
+              non tenetur. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Molestiae eaque, harum ipsam consequaturvoluptate deserunt
+              tempora voluptates quis cumque veritatis? Natus nobis enim
+              consectetur porro! Lorem ipsum dolor, sit amet consectetur
+              adipisicing elit. Harum mollitia eveniet ea. Natus culpa,
+              laboriosam facere est perspiciatis suscipit soluta iste corporis
+              sint impedit reprehenderit expedita perferendis fugiat non
+              tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Molestiae eaque, harum ipsam consequatur dignissimos, tempore
+              quasi recusandae iste hic explicabo dolore dignissimos, tempore
+              quasi recusandae iste hic explicabo dolore!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+          >Disabled</a
+        >
+      </li>
+    </ul>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
