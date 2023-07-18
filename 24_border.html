@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internal Css</title>
+    <style>
+      .one {
+        border-bottom-width: 1px;
+        border-bottom-color: red;
+        border-bottom-style: solid;
+        padding: 10px;
+        background-color: #fff;
+        border-top: 2px solid teal;
+      }
+      .two {
+        border-bottom-width: 10px;
+        border-bottom-color: teal;
+        border-bottom-style: dashed;
+        padding: 10px;
+        background-color: #fff;
+        border-top: 2px solid blue;
+      }
+      .three {
+        width: 200px;
+        height: 200px;
+        border: 10px solid teal;
+        border-radius: 50%;
+        background-color: pink;
+      }
+      .four {
+        width: 200px;
+        height: 200px;
+        border: 10px solid teal;
+        border-radius: 5px 25% 50% 0;
+        /*TopLeft TR  BR  BL*/
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Solid Border</h1>
+    <div class="one"></div>
+    <br />
+    <h1>Dashed Border</h1>
+    <div class="two"></div>
+    <br />
+    <h1>Rounded Border</h1>
+    <div class="three"></div>
+    <h1>Border Others</h1>
+    <div class="four"></div>
+  </body>
+</html>
