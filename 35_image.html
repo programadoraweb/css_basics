@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image</title>
+    <style>
+      figure{
+        padding: 5rem 2rem 2rem 2rem;
+      }
+      figcaption{
+          text-align: center;
+           padding: 2rem 0;
+      }
+      img {
+        display: block;
+        max-width: 100%; /* this way img will shrink if the are is too small  */
+        height: auto;
+        margin: 0 auto;
+      }
+      main {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
+      .parent {
+        flex-basis: 50%;
+        flex-shrink: 0;
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="parent">
+           <figure>
+        <img src="//unsplash.it/g/300/300" alt="alternative text" />
+      <figcaption>Text about the picture</figcaption>
+ </figure>
+        <p>
+          <kbd>
+            img { display: block; max-width: 100%; /* this way img will shrink
+            if the are is too small */ }
+          </kbd>
+        </p>
+      </div>
+
+      <!--  1. wrap img into a div that will belong to a section or other element 
+    2. give to that div (not to the img) flex-basis
+  3. give to the img only the width-->
+
+      <div>
+        <p>To fit an image into a specific space</p>
+        .object-fit: cover, contain, fill & scale down (default).
+      </div>
+    </main>
+  </body>
+</html>
