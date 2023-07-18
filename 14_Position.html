@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+    <style>
+      .fixed {
+        position: fixed;
+        margin-bottom: 20px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: lightpink;
+      }
+      .styled-divs {
+        background-color: lightseagreen;
+        border: 2px solid seagreen;
+        margin: 20px;
+        height: 200px;
+        width: 800px;
+      }
+      .gold {
+        background-color: gold;
+      }
+      .relative {
+        position: relative;
+        border: 1px solid red;
+        width: 100%;
+        height: 400px;
+        background-color: lightsteelblue;
+      }
+      .white {
+        background-color: white;
+        height: 50%;
+      }
+      .absolute {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: calc(50% - 25px);
+        left: calc(50% - 25px);
+        background-color: pink;
+      }
+      .sticky {
+        position: sticky;
+      }
+      .parent {
+        background-color: lightseagreen;
+        border: 2px solid seagreen;
+        margin: 20px;
+        height: 900px;
+        width: 900px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="fixed">Position Fixed</h1>
+    <div style="padding-top: 50px">
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <p>title written above has a fixed position</p>
+      <div class="styled-divs"></div>
+      <div class="styled-divs"></div>
+      <div class="styled-divs"></div>
+    </div>
+
+    <hr />
+    <div class="styled-divs white">
+      <h1>Position Absolute x Position Relative</h1>
+      <p>
+        For Position Absolute to work, on the parent element you need to add
+        position Relative.
+      </p>
+      <p>
+        by default position absolute will be relative to the body, but if
+        you want it to be relative to another div, you should give position
+        relative to that div.
+      </p>
+      <div class="relative">
+        POSITION RELATIVE
+        <div class="absolute">
+          <p></p>
+            POSTION ABSOLUTE - everything else will go underneeth position
+            absolute.
+          </p>
+         
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <hr />
+    <div class="parent">
+      <div class="styled-divs sticky gold">
+        POSITION STICKY - sticks inside of a parent
+      </div>
+      <div class="styled-divs white"></div>
+    </div>
+  </body>
+</html>
