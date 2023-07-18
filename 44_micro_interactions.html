@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Micro Interactions</title>
+  </head>
+  <body>
+    <h1>Micro-interactions</h1>
+    <ok>
+      <li>Transition</li>
+      <li>Animation + Keygrames</li>
+    </ok>
+    <p>
+      the communications between the user and the system will be much better
+      when the system gives to user small feedbacks through micro-interactions
+      during the communication process.
+    </p>
+    <p>
+      you can trigger micro-interactions with pseudo clases or clases changes
+    </p>
+    <hr />
+    <p>Elements that micro-interactions should apply:</p>
+    <ul>
+      <li>font-size</li>
+      <li>background-color</li>
+      <li>width</li>
+      <li>left</li>
+    </ul>
+    <p>Elements that micro-interactions should NOT apply:</p>
+    <ul>
+      <li>change font-family</li>
+      <li>position:from absolute to relative</li>
+      <li>change display ie. block to inline</li>
+      <li>left</li>
+    </ul>
+    <hr />
+    <h1>Micro-interactions to solve problems:</h1>
+    <ol>
+      <li><strong>Orientation on the page</strong></li>
+      <p>
+        where are you now in the page, where can you go and from where did you
+        come
+      </p>
+      <li><strong>Functional Change</strong></li>
+      <p>what does this element do now. ie. switch button</p>
+      <li><strong>New Elements</strong></li>
+      <p>What changed? ie. new elements could appear smoothly.</p>
+      <li><strong>Highlight</strong></li>
+      <p>catch the user s attention to what is important on this page</p>
+      <li><strong>Visual Feedback </strong></li>
+      <p>the system understood the info that you gave ie. input data</p>
+      <li><strong>System Status</strong></li>
+      <p>to understand that the system is processing info, ie. progress bar</p>
+    </ol>
+
+    <p>
+      for performance reasons better makes interactions with rotation, opacity,
+      scale & positions. Other properties could give a bad performance (bellow
+      60fps), as other properties could reprint the element on the screen.
+      Rotatio, opacity, scale & positions will just change the element they're
+      focusing in.
+    </p>
+  </body>
+</html>
