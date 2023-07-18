@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient</title>
+    <style>
+      div {
+        height: 200px;
+        width: 200px;
+        margin-bottom: 20px;
+      }
+      .linear-gray-black-bottom {
+        background: linear-gradient(to bottom, #ccc, #000);
+      }
+      .linear-gray-black-right {
+        background: linear-gradient(to right, #ccc, #000);
+      }
+      .linear-gray-black-top-left {
+        background: linear-gradient(to top left, #ccc, #000);
+      }
+      .linear-gray-black-degree {
+        background: linear-gradient(10deg, #ccc, #000);
+      }
+      .linear-gray-black-minus-degree {
+        background: linear-gradient(-60deg, #ccc, #000);
+      }
+      .linear-gray-black-minus-degree-repeat {
+        background: repeating-linear-gradient(
+          -60deg,
+          #ccc,
+          #000,
+          blue 5%,
+          white 10%
+        );
+      }
+      .radial-circle {
+        background: radial-gradient(circle, red, blue, yellow);
+      }
+      .radial-circle-percentage {
+        background: radial-gradient(circle, red 5%, blue 15%, yellow 25%);
+      }
+      .radial-circle-repeat {
+        background: repeating-radial-gradient(
+          closest-side,
+          blue,
+          red 20%,
+          yellow 20%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Linear Gradient</h1>
+    <div class="linear-gray-black-bottom"></div>
+    <div class="linear-gray-black-right"></div>
+    <div class="linear-gray-black-top-left"></div>
+    <div class="linear-gray-black-degree"></div>
+    <div class="linear-gray-black-minus-degree"></div>
+
+    <br />
+    <hr />
+    <h1>Linear Gradient Repeat</h1>
+    <div class="linear-gray-black-minus-degree-repeat"></div>
+    <br />
+    <hr />
+    <h1>Radial Gradient</h1>
+    <div class="radial-circle"></div>
+    <div class="radial-circle-percentage"></div>
+    <br />
+    <hr />
+
+    <h1>Radial Gradient Repeat</h1>
+    <div class="radial-circle-repeat"></div>
+    <br />
+    <hr />
+    <p>Gradient is when one color, slowly transitions into another color</p>
+  </body>
+</html>
