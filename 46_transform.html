@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .box1 {
+        width: 150px;
+        height: 150px;
+        background-color: lightcoral;
+        position: relative;
+        left: 25%;
+      }
+      .box1::before {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: palevioletred;
+        z-index: -1;
+        transform: translate(-20px, -20px);
+      }
+      .box-rotate {
+        width: 150px;
+        height: 150px;
+        background-color: lightcoral;
+        position: relative;
+        left: 25%;
+        transition: 1s all linear;
+        margin-bottom: 3rem;
+      }
+      .rotate-1:hover {
+        transform: rotateZ(-90deg);
+        background-color: palevioletred;
+        border-radius: 50%;
+      }
+      .rotate-2:hover {
+        transform: rotateZ(-90deg);
+        background-color: palevioletred;
+        transform: rotateZ(45deg);
+      }
+      .rotate-3:hover {
+        transform: rotateZ(-90deg);
+        background-color: palevioletred;
+        transform: rotateZ(720deg); /* twice */
+        border-radius: 50%;
+      }
+      .rotate-4:hover {
+        transform: rotateZ(-90deg);
+        background-color: palevioletred;
+        transform: rotate(-90deg);
+      }
+      .rotate-5:hover {
+        transform: rotateZ(-90deg);
+        background-color: palevioletred;
+        transform: rotateY(-90deg);
+      }
+      .rotate-5:hover {
+        transform: rotateZ(-90deg);
+        background-color: palevioletred;
+        transform: rotateX(-90deg);
+      }
+      .box-scale {
+        float: left;
+        width: 80px;
+        height: 80px;
+        padding: 20px;
+        background-color: lightcoral;
+        text-align: center;
+        color: #fff;
+        margin-right: 10px;
+        transition: 1s all ease-out;
+      }
+      .scale-one:hover {
+        transform: scale(0.3);
+        background-color: palevioletred;
+      }
+      .scale-two:hover {
+        transform: scale(2);
+        background-color: palevioletred;
+      }
+      .box4 {
+        width: 150px;
+        height: 150px;
+        background-color: lightcoral;
+        position: relative;
+        left: 25%;
+        margin-bottom: 2rem;
+        transition: 1s all linear;
+      }
+      .skew-one:hover {
+        transform: skewY(50deg);
+        background-color: palevioletred;
+      }
+      .skew-two:hover {
+        transform: skewX(50deg);
+        background-color: palevioletred;
+      }
+      .skew-three:hover {
+        transform: skew(50deg);
+        background-color: palevioletred;
+      }
+      .box-transform {
+        width: 150px;
+        height: 150px;
+        background-color: lightcoral;
+        position: relative;
+        left: 25%;
+        margin-bottom: 2rem;
+        transition: 1s all ease-out;
+      }
+      .box5:hover {
+        transform: scale(1.1) translate(20px, 20px) skewX(30deg) skewY(10deg);
+        background-color: palevioletred;
+        border-radius: 50%;
+      }
+      .box6:hover {
+        transform: rotateX(180deg);
+        transform: translateX(50px) translateY(50px);
+        background-color: palevioletred;
+      }
+      .box7:hover {
+        transform: rotatey(180deg);
+        transform: translateX(50px) translateY(50px);
+        background-color: palevioletred;
+      }
+      .box8:hover {
+        transform: rotateZ(180deg);
+        transform: translateX(50px) translateY(50px);
+        background-color: palevioletred;
+      }
+      .box9:hover {
+        transform: skewX(30deg) skewY(-30deg);
+        transform: translateX(50px) translateY(50px);
+        background-color: palevioletred;
+        border-radius: 50%;
+      }
+      .box10:hover {
+        transform: scaleX(2) scaleY(3);
+        transform: translateX(50px) translateY(50px);
+        background-color: palevioletred;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>1. Transform translate</h1>
+      <div class="box1">- ie. transform: translate(20px, 10px);</div>
+    </div>
+    <hr />
+    <div>
+      <h1>2. Transform rotate</h1>
+      <div class="box-rotate rotate-1">- ie. transform: rotate(100deg);</div>
+      <div class="box-rotate rotate-2"></div>
+      <div class="box-rotate rotate-3"></div>
+      <div class="box-rotate rotate-4"></div>
+    </div>
+    <hr />
+    <div>
+      <h1>3. Transform scale</h1>
+      <div class="box-scale scale-one"></div>
+      <div class="box-scale scale-two">- ie. transform: scale(1.3, 1.3);</div>
+    </div>
+    <hr />
+    <div>
+      <h1>4.Transform skew</h1>
+      <div class="box4 skew-one">skewY</div>
+      <div class="box4 skew-two">skewX</div>
+      <div class="box4 skew-three">
+        skew - ie. transform: skew(4deg, -20deg);
+      </div>
+    </div>
+    <h1>5. Multiple Transforms</h1>
+    <div class="box-transform box5"></div>
+    <div class="box-transform box6"></div>
+    <div class="box-transform box7"></div>
+    <div class="box-transform box8"></div>
+    <div class="box-transform box9"></div>
+    <div class="box-transform box10"></div>
+
+    <hr />
+  </body>
+</html>
