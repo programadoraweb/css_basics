@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions Box</title>
+    <style>
+.parent {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 2vw;
+  background-color: lightslategray;
+}
+.child{
+    width: 20vw;
+  color: black;
+  font-size: 3em;
+  background-color: lightsalmon;
+  margin: 5vh 0;
+  padding: 2vh;
+  text-align: center;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  box-shadow: 10px 10px 10px black;
+}
+
+.one:hover {
+    background-color: lightskyblue;
+  border-radius: 20px;
+  height: 150px;
+  transition: background 1.5s linear, border-radius 1.5s linear,
+    height 1.5s linear;
+}
+
+/* .box:hover {
+  background: green;
+  border-radius: 20px;
+  top: 10px;
+  left: 10px;
+  box-shadow: 0px 0px 10px black;
+  transition: background 0.2s linear, border-radius 0.2s linear, top 0.2s linear,
+ left 0.2s linear, box-shadow 0.2s linear;
+} */
+
+.two:hover {
+  top: 10px;
+  left: 10px;
+  border-radius: 20px;
+  /* box-shadow: 0px 0px 10px black; */
+  background-color: lightskyblue;
+  transition: background 1.5s linear, border-radius 1.5s linear, top 1.5s linear,
+    left 1.5s linear, box-shadow 1.5s linear;
+}
+
+.three span {
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: top 1.5s linear, left 1.5s linear;
+
+}
+
+.three:hover span {
+  position: relative;
+  top: -10px;
+  left: -10px;
+  transition: top 0.2s linear, left 0.2s linear;
+  background-color: lightskyblue;
+}
+
+.three-one span {
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: top 1.5s linear, left 1.5s linear;
+  
+}
+.three-one{
+
+  border-radius: 20px;
+}
+.three-one:hover span {
+  position: relative;
+  top: -10px;
+  left: -10px;
+  transition: top 0.2s linear, left 0.2s linear;
+  background: lightskyblue;
+}
+.threePunto1:hover {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  border-radius: 20px;
+  transition: top 2s linear, left 2s linear;
+}
+
+.four {
+
+  transition: background 0.2s linear, border-radius 0.2s linear, top 0.2s linear,
+    left 0.2s linear, box-shadow 0.2s linear;
+}
+.four span {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  border-radius: 1em;
+  transition: top 0.5s linear, background 0.5s linear;
+}
+.four:hover span:nth-child(even) {
+  position: relative;
+  top: 3px;
+  background-color: lightskyblue;
+  transition: top 0.5s linear, background 0.5s linear;
+}
+.four:hover span:nth-child(odd) {
+  position: relative;
+  top: -3px;
+  background-color: lightskyblue;
+  transition: top 0.5s linear, background 0.5s linear;
+}
+.four:hover {
+    background-color: white;
+  border-radius: 20px;
+  top: 10px;
+  left: 10px;
+  box-shadow: 0px 0px 10px black;
+  transition: background 0.2s linear, border-radius 0.2s linear, top 0.2s linear,
+    left 0.2s linear, box-shadow 0.2s linear;
+}
+
+.five {
+
+  transition: transform 1.5s linear;
+}
+.five:hover {
+  transform: rotate(360deg) scale(1, 2);
+  transition: transform 0.2s linear;
+  background-color: lightskyblue;
+
+}
+
+.fivePunto1 {
+  background: lightblue;
+  transition: transform 1.5s linear;
+}
+.fivePunto1:hover {
+  transform: rotate(-180deg) scale(1, 2);
+  transition: transform 0.2s linear;
+}
+
+.six span {
+  display: inline-block;
+  transition: transform 1.5s linear;
+}
+.six:hover span {
+  transform: rotate3d(0, 1, 0, 720deg);
+  transition: transform 0.2s linear;
+  
+}
+
+.six-one span {
+  display: inline-block;
+  transition: transform 1.5s linear;
+}
+.six-one:hover span {
+  transform: rotate3d(0, 1, 0, 720deg);
+}
+
+.six-two span {
+  display: inline-block;
+  transition: transform 1.5s linear;
+}
+.six-two:hover span {
+  transform: rotate3d(1, 1, 0, 720deg);
+}
+
+.six-three span {
+  display: inline-block;
+  transition: transform 1.5s linear;
+}
+.six-three:hover span {
+  transform: rotate3d(1, 0, 0, 720deg);
+}
+
+
+.seven span {
+  position: relative;
+  transition: left 1.5s linear;
+}
+.seven span:nth-child(even) {
+  left: -100vw;
+}
+.seven span:nth-child(odd) {
+  left: 100vw;
+}
+.seven:hover span {
+  left: 0;
+  transition: left 0.2s linear;
+}
+
+.eight span {
+  display: inline-block;
+  transition: transform 1.5s linear;
+}
+.eight:hover span {
+  transform: scale(0.5, 1.5);
+  transition: transform 0.2s linear;
+}
+
+
+.nine span {
+  display: inline-block;
+  transition: transform 1.5s linear;
+}
+.nine:hover span {
+  transform: scale(0.5, 1.5);
+  transition: transform 0.2s linear;
+}
+
+
+.ten span {
+  display: inline-block;
+  transition: transform 1.5s linear;
+}
+.ten:hover span {
+  transform: scale(0.5, 1.5);
+  transition: transform 0.2s linear;
+}
+.ten:hover span:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.ten:hover span:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.ten:hover span:nth-child(4) {
+  transition-delay: 0.6s;
+}
+.ten:hover span:nth-child(5) {
+  transition-delay: 0.8s;
+}
+
+.eleven {
+
+  text-shadow: 0 0 0 darkblue;
+  transition: background 1.5s ease-in-ease-out,
+    font-weight 1.5s ease-in-ease-out, text-shadow 1.5s ease-in-ease-out,
+    box-shadow 1.5s ease-in-ease-out;
+}
+.eleven:hover {
+  background-color: transparent;
+  font-weight: 900;
+  text-shadow: 0 0 20px darkblue;
+  box-shadow: 0 0 15px darkblue;
+  transition: background 0.2s ease-in-ease-out,
+    font-weight 0.2s ease-in-ease-out, text-shadow 0.2s ease-in-ease-out,
+    box-shadow 0.2s ease-in-ease-out;
+}
+
+
+.twelve span {
+  position: absolute;
+  left: 25%;
+  transition: transform 1.5s linear;
+}
+.twelve:hover span {
+  transition: transform 0.2s linear;
+}
+.twelve span:nth-child(even) {
+  transform: scale(1, 0);
+}
+.twelve:hover span:nth-child(odd) {
+  transform: scale(1, 0);
+}
+.twelve:hover span:nth-child(even) {
+  transform: scale(1, 1);
+}
+
+    </style>
+</head>
+<body>
+    <h1>boxes</h1>
+    <div class="parent">
+      <div class="child one">Box 1</div>
+      <div class="child two">Box 2</div>
+      <div class="child three">
+        <span>B</span><span>o</span><span>x</span> <span>3</span>
+      </div>
+      <div class="child three-one">
+        <span>B</span><span>o</span><span>x</span> <span>3</span>
+      </div>
+      <div class="child four">
+        <span>B</span><span>o</span><span>x</span> <span>4</span>
+      </div>
+      <div class="child five">Box 5</div>
+      <div class="child six"><span>Box 6</span></div>
+      <div class="child six-one"><span>Box 6</span></div>
+      <div class="child six-two"><span>Box 6</span></div>
+      <div class="child six-three"><span>Box 6</span></div>
+      <div class="child seven"><span>B</span><span>o</span><span>x</span> <span>7</span></div>
+      <div class="child eight"><span>Box 8</span></div>
+      <div class="child nine"><span>B</span><span>o</span><span>x</span> <span>9</span></div>
+      <div class="child ten"><span>B</span><span>o</span><span>x</span> <span>1</span><span>0</span></div>
+      <div class="child eleven">Box 11</div>
+      <div class="child twelve"><span>Box 12</span><span>Text!!<span></div>
+    </div>
+</body>
+</html>

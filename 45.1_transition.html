@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+
+    <style>
+      .box1 {
+        width: 80px;
+        height: 80px;
+        background-color: pink;
+        transition: 250ms width linear, 250ms height linear;
+      }
+      .box1:hover {
+        width: 200px;
+        height: 200px;
+        background-color: lightskyblue;
+      }
+      .p1 {
+        color: #000;
+        font-size: 5rem;
+        transition-duration: 0.3s;
+        transition-property: color;
+        transition-timing-function: linear;
+      }
+      .p1:hover {
+        color: pink;
+        font-size: 7rem;
+        text-shadow: 20px 20px lightslategray;
+      }
+
+      .wrapping {
+        padding: 2rem;
+        height: 400px;
+        background-color: lightslategray;
+        margin-bottom: 2rem;
+      }
+      .parent {
+        position: relative;
+        height: 50px;
+        margin-bottom: 2rem;
+        background-color: lightgray;
+      }
+
+      .child {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        transition-duration: 5s;
+        transition-property: left;
+        background-color: lightpink;
+      }
+      .l-one {
+        transition-timing-function: linear;
+      }
+      .l-two {
+        transition-timing-function: ease;
+      }
+      .l-three {
+        transition-timing-function: ease-in;
+      }
+      .l-four {
+        transition-timing-function: ease-out;
+      }
+      .l-five {
+        transition-timing-function: ease-in-out;
+      }
+      .wrapping:hover .l-one {
+        left: calc(100% - 50px);
+        left: 100% would be wrong because its not taking under consideration the
+          size of the box;
+      }
+      .wrapping:hover .l-two {
+        left: calc(100% - 50px);
+      }
+      .wrapping:hover .l-three {
+        left: calc(100% - 50px);
+      }
+      .wrapping:hover .l-four {
+        left: calc(100% - 50px);
+      }
+      .wrapping:hover .l-five {
+        left: calc(100% - 50px);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Transitions</h1>
+    <ol>
+      <li>transition: opacity 300ms ease-in-out 3s;</li>
+      <li>
+        <strong>
+          transitions: [property - name of the property] [duration - how long it
+          will happen ] [timing-function - ie. ease] [delay - how long should we
+          wait till it starts]
+        </strong>
+      </li>
+      <li>transition-property: color;</li>
+      <li>transition-duration: 0.3s;</li>
+      <li>transition-timing-function: linear;</li>
+      <li>transition-delay: 1s;</li>
+    </ol>
+    <p>
+      Transition is the way how you get from point A to point B in a smooth
+      maner
+    </p>
+    <div class="box1"></div>
+    <br />
+    <p class="p1">change color</p>
+    <br />
+    <h1>timing-function</h1>
+    <div class="wrapping">
+      <div class="parent">
+        <div class="child l-one">linear</div>
+      </div>
+      <div class="parent">
+        <div class="child l-two">ease</div>
+      </div>
+      <div class="parent">
+        <div class="child l-three">ease-in</div>
+      </div>
+      <div class="parent">
+        <div class="child l-four">ease-out</div>
+      </div>
+      <div class="parent">
+        <div class="child l-five">ease-in-out</div>
+      </div>
+    </div>
+    <br />
+  </body>
+</html>
