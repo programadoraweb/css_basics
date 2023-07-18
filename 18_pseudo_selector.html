@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Selector</title>
+    <style>
+/* :root */
+      :root{
+      /*  font-size: 62%; */
+       font-size: 20px;
+      }
+      /* ::selection*/
+      /* any text you sellect will have this style  */
+      ::selection{
+      background-color: palevioletred;
+      color: white;
+  
+      }
+      /*  :hover */
+      .box {
+        height: 200px;
+        background-color: thistle;
+      }
+      .box:hover {
+        background-color: blue;
+        border: 20px solid salmon;
+      }
+      /* :first-child, nth-child() & :last-child */
+      .child {
+        height: 200px;
+        background-color: thistle;
+        margin-bottom: 20px;
+      }
+      div.child:first-child {
+        background-color: seagreen;
+      }
+      div.child:nth-child(3){
+        background-color: salmon;
+      }
+      div.child:last-child {
+        background-color: yellow;
+      }
+      /*  :focus */
+     /*  for keyboarding navitagion  */
+     button:focus{
+      background-color: blue;
+     }
+
+     /*  :focus-within */
+      input:focus-within {
+        border: 4px solid black;
+        background-color: tomato;
+      }
+       /*  :checked */
+       
+input[type='checkbox']:checked + div.text {
+  background-color: blue;
+  color: #fff;
+}
+
+  /*  :disabled */
+input:disabled {
+    background-color: grey;
+}
+    /*  :enabled */
+    input:enabled{
+        border: 3px solid green;
+    }
+     /*  :not*/
+
+/* select all "friends" classes that does not contains maria and/or jose,
+and apply red to it */
+.friends:not(.maria):not(.jose) {
+  color: red;
+}
+
+
+ /*  :before*/
+
+ .black-box{
+     background-color: black;
+     height: 50px;
+     width: 50px;
+position: relative;
+ }
+
+ .black-box:before{
+     content: "";
+    background-color: #8c1515;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  width: 50px;
+  height: 50px;
+  z-index: -1;
+ }
+
+ .middle-text:before{
+    content: ' (Before Text)';
+  font-size: 30px;
+  color: blue;
+
+ }
+  /*  :after*/
+  .green-box{
+     background-color: green;
+     height: 50px;
+     width: 50px;
+position: relative;
+ }
+
+  .green-box:after{
+     content: "";
+    background-color: blue;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  width: 50px;
+  height: 50px;
+  z-index: 0;
+ }
+
+ .middle-text:after{
+    content: ' (After Text)';
+  font-size: 30px;
+  color: green;
+
+ }
+   /*  :placeholder*/
+   input::placeholder{
+   color: red;
+
+   }
+       /*  :placeholder-show*/
+   input.show:placeholder-shown{
+    color: blue;
+   }
+
+
+    </style>
+  </head>
+  <body>
+    <h1>:Hover</h1>
+    <div class="box"></div>
+    <hr />
+    <h1>:first-child, :nth-child & :last-child</h1>
+    <div class="parent">
+      <div class="child">:first-child</div>
+      <div class="child two-with-focus"></div>
+      <div class="child">:nth-child(3)</div>
+      <div class="child"></div>
+      <div class="child">:last-child</div>
+    </div>
+    <hr />
+    <h1>:focus</h1>
+    <p>usefull specially for keyboarding navigation purpose</p>
+    <button>button</button>
+    <hr />
+    <h1>:focus-within</h1>
+    <input placeholder="type your name" ></input>
+    <br />
+    <hr />
+    <h1>:checked</h1>
+    <input type="checkbox" id="cbox" />
+    <div class="text">Text in here</div>
+    <label for="cbox" style="position: relative; bottom: -10px; background-color: grey;">
+        Click in here
+    </label>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <h1>:disabled</h1>
+    <input type="text" disabled>
+    <hr>
+    <br>
+    <h1>:enabled</h1>
+    <input type="text"  />
+    <hr>
+    <br>
+    <h1>:not</h1>
+    <p class="friends maria">friends</p>
+    <p class="friends jose">friends</p>
+    <p class="friends camilla">friends</p>
+    <p class="friends helena">friends</p>
+    <p class="friends montse">friends</p>
+    <hr>
+    <br>
+
+    <h1>:before</h1>
+    <div class="black-box"></div>
+    <hr>
+    <br>
+    <h1>:after</h1>
+    <div class="green-box"></div>
+    <p class="middle-text">middle text</p>
+    <hr>
+    <br>
+    <h1>:placeholder</h1>
+    <p>normal placeholder style</p>
+    <input class="holder" type="text" placeholder="placeholder">
+    <hr>
+    <br>
+    <h1>:placeholder-show</h1>
+    <p>only shows before you type sth</p>
+    <input class="show" type="text" placeholder="placeholder show">
+    <hr>
+    <br>
+    <h1>::selection</h1>
+    <div><p><Strong>Applies to the hole .html file</Strong>any text you sellect will change to the same style. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore illum nostrum impedit amet, delectus iure omnis ad odio nulla! Similique magnam, commodi eveniet molestias repudiandae recusandae illo dolore quae tempore!</p></div>
+    <hr>
+    <br>
+    <p>You cannot write pseudo selector in inline styles</p>
+  </body>
+</html>
