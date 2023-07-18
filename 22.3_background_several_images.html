@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Several Images</title>
+    <style>
+      .box {
+        height: 300px;
+        border: 5px solid red;
+        background-size: 20%, 100%;
+        /*  1 size for the 1st image and another for the 2nd img */
+        background-image: url('//unsplash.it/g/300/300'),
+          url('//unsplash.it/g/300/300');
+        background-position: left bottom, center center;
+        /* 1st value for the 1st img, 2nd value for 2nd img  */
+        background-repeat: repeat-x, no-repeat;
+        /* 1st value for the 1st img, 2nd value for 2nd img  */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

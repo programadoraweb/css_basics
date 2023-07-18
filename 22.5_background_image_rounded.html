@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Rounded Image</title>
+    <style>
+      .img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-image: url('//unsplash.it/g/300/300');
+        background-position: center center;
+      }
+      .img2 {
+        width: 200px;
+        height: 200px;
+        border-radius: 5px 25% 50% 0;
+        /*TopLeft TR  BR  BL*/
+        background-image: url('//unsplash.it/g/300/300');
+        background-position: center center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img"></div>
+    <div class="img2"></div>
+  </body>
+</html>
