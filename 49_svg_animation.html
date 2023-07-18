@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Animation</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 5rem auto;
+        background-color: lightgray;
+      }
+      .happy-face {
+        height: 200px;
+        animation-name: happy-face-bouncing;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes happy-face-bouncing {
+        30% {
+          transform: translateY(-50px);
+        }
+        50% {
+          transform: scale(1.5) rotate(10deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg
+      version="1.1"
+      class="happy-face"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      viewBox="-1342 713.1 194.9 194.9"
+      style="enable-background: new -1342 713.1 194.9 194.9"
+      xml:space="preserve"
+    >
+      <style type="text/css">
+        .st0 {
+          fill: goldenrod;
+        }
+        .st1 {
+          fill: white;
+        }
+        .st2 {
+          fill: white;
+        }
+      </style>
+      <title id="title" lang="en">Smilling Face</title>
+      <circle class="st0" cx="-1244.6" cy="810.5" r="97.4" />
+      <circle class="st1" cx="-1266.1" cy="786" r="4.8" />
+      <circle class="st1" cx="-1222.2" cy="786" r="4.8" />
+      <path
+        class="st2"
+        d="M-1195.2,816.3c0,27.3-22.1,49.4-49.4,49.4c-27.3,0-49.4-22.1-49.4-49.4H-1195.2z"
+      />
+    </svg>
+  </body>
+</html>
