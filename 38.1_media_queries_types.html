@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Querries</title>
+  </head>
+  <body>
+    <ol>
+      <li>@media(min-width){code in here}</li>
+      <li>@media(max-width){code in here}</li>
+      <li>@media(orientation: landscape){code in here}</li>
+      <li>@media(orientation: portrait){code in here}</li>
+      <li>@media screen and (min-width){code in here}</li>
+      <li>@media print and (min-width){code in here}</li>
+      <p>
+        <kbd>
+          @media print { .nav-bar, footer, aside, { display: none; } main {
+          border: 0; } }
+        </kbd>
+      </p>
+      <li>@media(prefers-color-scheme: light){code in here}</li>
+      <li>@media(prefers-color-scheme: dark){code in here}</li>
+      <li>Feature Queries</li>
+      <ul>
+        <li>@supporot( display: grid){.body{color: green}}</li>
+        <li>
+          if the browser supports this code, it will do, if not they will do the
+          default code that you wrote outside the feature query.
+        </li>
+      </ul>
+      <li>Block annimation</li>
+      <ul>
+        <li>
+          @media(preferes-reduce-motion: reduce){//transition, animation,
+          scroll-behavior}
+        </li>
+      </ul>
+    </ol>
+    <p>Media Queries will only work with the viewport metatag!</p>
+    <p>
+      <kbd>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"
+      </kbd>
+    </p>
+  </body>
+</html>
