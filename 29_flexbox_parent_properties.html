@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Parent Properties</title>
+    <style>
+      .parent {
+        background-color: lightslategray;
+        display: flex;
+      }
+      .parent-align {
+        background-color: lightslategray;
+        display: flex;
+        height: 500px;
+      }
+      .child{
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+        border: 3px solid royalblue;
+        margin: 20px;
+      }
+      .child-noheight{
+        width: 100px;
+        background-color: pink;
+        border: 3px solid royalblue;
+        margin: 20px;
+      }
+      .row {
+        flex-direction: row;
+      }
+
+      .column {
+        flex-direction: column;
+      }
+      .wrap{
+          flex-wrap: wrap;
+      }
+      .nowrap{
+          flex-wrap: nowrap;
+      }
+      .flex-start{
+justify-content: flex-start;
+      }
+      .flex-end{
+justify-content: flex-end;
+      }
+      .center{
+justify-content: center;
+      }
+      .space-between{
+justify-content: space-between;
+      }
+      .space-around{
+justify-content: space-around;
+      }
+      .space-evenly{
+justify-content: space-evenly;
+      }
+.align-items-flex-start{
+align-items: flex-start;
+}
+.align-items-flex-end{
+align-items: flex-end;
+}
+.align-items-center{
+align-items: center;
+}
+.align-items-stretch{
+align-items: stretch;
+}
+.align-items-baseline{
+    align-items: baseline;
+}
+.align-content-flex-start{
+align-content: flex-start;
+}
+.align-content-flex-end{
+align-content: flex-end;
+}
+.align-content-center{
+align-content: center;
+}
+.align-content-stretch{
+align-content: stretch;
+}
+.align-content-space-between{
+align-content: space-between;
+}
+.align-content-space-around{
+align-content: space-around;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Parent Properties:</h1>
+    <ol>
+      <li>flex-direction</li>
+      <ol>
+        <li>row</li>
+        <li>column</li>
+        <li>row reverse</li>
+        <li>column reverse</li>
+      </ol>
+      <li>flex-wrap</li>
+      <ol>
+        <li>wrap</li>
+        <li>no wrap</li>
+        <li>wrap reverse</li>
+      </ol>
+      <li>Justify Content <strong>horizontal</strong></li>
+      <ol>
+        <li>flex start</li>
+        <li>flex end</li>
+        <li>center</li>
+        <li>space between</li>
+        <li>space around</li>
+        <li>space evenly</li>
+      </ol>
+      <li>Align Items <strong>vertical</strong></li>
+      <ol>
+        <li>flex start</li>
+        <li>flex end</li>
+        <li>center</li>
+        <li>stretch</li>
+        <li>baseline</li>
+      </ol>
+      <li>Align Content</li>
+      <ol>
+        <li>flex start</li>
+        <li>flex end</li>
+        <li>center</li>
+        <li>stretch</li>
+        <li>space between</li>
+        <li>space around</li>
+      </ol>
+    </ol>
+
+    <h2>flex-direction-row</h2>
+    <div class="parent row">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <divclass="child"></divclass=>
+    </div>
+
+    <h2>flex-direction-column</h2>
+    <div class="parent column">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+
+    <h2>flex-wrap</h2>
+    <div class="parent wrap">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+
+    <h2>flex-nowrap</h2>
+    <div class="parent nowrap">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+
+    
+    <h2>justify-content: flex-start</h2>
+    <div class="parent flex-start">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+
+     
+    <h2>justify-content: flex-end</h2>
+    <div class="parent flex-end">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+
+     
+    <h2>justify-content: center</h2>
+    <div class="parent center">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+
+    <h2>justify-content: space-between</h2>
+    <div class="parent space-between">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+
+    <h2>justify-content: space-around</h2>
+    <div class="parent space-around">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+
+    
+    <h2>justify-content: space-evenly<h2>
+    <div class="parent space-evenly">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+
+    <h2>align-items: flex-start<h2>
+        <div class="parent-align align-items-flex-start">
+          <div class="child"></div>
+          <div class="child"></div>
+          <div class="child"></div>
+          <div class="child"></div>
+        </div>
+
+ 
+  <h2>align-items: flex-end<h2>
+      <div class="parent-align align-items-flex-end">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+      </div>
+
+
+  <h2>align-items: center<h2>
+      <div class="parent-align align-items-center">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+      </div>
+
+  <h2>align-items: stretch<h2>
+      <p>in order to stretch properly the children element should not have height</p>
+      <div class="parent-align align-items-stretch">
+        <div class="child-noheight"></div>
+        <div class="child-noheight"></div>
+        <div class="child-noheight"></div>
+        <div class="child-noheight"></div>
+      </div>
+
+      <h2>align-items: baseline<h2>
+          <div class="parent-align align-items-baseline">
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+          </div>
+
+         
+      <h2>align-content: flex-start<h2>
+        <div class="parent-align row wrap align-content-flex-start">
+          <div class="child"></div>
+          <div class="child"></div>
+          <div class="child"></div>
+          <div class="child"></div>
+          <div class="child"></div>
+          <div class="child"></div>
+          <div class="child"></div>
+          <div class="child"></div>
+          <div class="child"></div>
+          <div class="child"></div>
+          <div class="child"></div>
+          <div class="child"></div>
+          <div class="child"></div>
+          <div class="child"></div>
+        </div> 
+        <h2>align-content: flex-end<h2>
+          <div class="parent-align row wrap align-content-flex-end">
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+          </div> 
+          <h2>align-content: center<h2>
+            <div class="parent-align row wrap align-content-center">
+              <div class="child"></div>
+              <div class="child"></div>
+              <div class="child"></div>
+              <div class="child"></div>
+              <div class="child"></div>
+              <div class="child"></div>
+              <div class="child"></div>
+              <div class="child"></div>
+              <div class="child"></div>
+              <div class="child"></div>
+              <div class="child"></div>
+              <div class="child"></div>
+              <div class="child"></div>
+              <div class="child"></div>
+            </div> 
+            <h2>align-content: stretch<h2>
+              <div class="parent-align row wrap align-content-stretch">
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+              </div> 
+              <h2>align-content: space-between<h2>
+                <div class="parent-align row wrap align-content-space-between">
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                </div> 
+                <h2>align-content: space-around<h2>
+                  <div class="parent-align row wrap align-content-space-around">
+                    <div class="child"></div>
+                    <div class="child"></div>
+                    <div class="child"></div>
+                    <div class="child"></div>
+                    <div class="child"></div>
+                    <div class="child"></div>
+                    <div class="child"></div>
+                    <div class="child"></div>
+                    <div class="child"></div>
+                    <div class="child"></div>
+                    <div class="child"></div>
+                    <div class="child"></div>
+                    <div class="child"></div>
+                    <div class="child"></div>
+                  </div>                
+  </body>
+</html>
