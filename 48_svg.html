@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG</title>
+    <style>
+      body {
+        background-color: lightslategray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Circle</h1>
+    <svg id="" height="200" width="200" xmlns="http://www.w3.org/2000/svg">
+      <circle id="" cx="100" cy="100" r="100" fill="pink" />
+    </svg>
+    <br />
+    <br />
+
+    <h1>Circle - fill none</h1>
+    <svg
+      id=""
+      height="200"
+      width="200"
+      xmlns="http://www.w3.org/2000/svg"
+      style="stroke: #000000; stroke-width: 5"
+    >
+      <circle id="" cx="100" cy="100" r="100" fill="none" />
+    </svg>
+    <br />
+    <br />
+
+    <h1>Rectangle</h1>
+    <svg id="" height="200" width="200" xmlns="http://www.w3.org/2000/svg">
+      <rect
+        id=""
+        width="300"
+        height="100"
+        fill="pink"
+        style="stroke: #000000; stroke-width: 5"
+      />
+    </svg>
+    <br />
+    <br />
+
+    <h1>Line</h1>
+    <svg id="" height="200" xmlns="http://www.w3.org/2000/svg">
+      <line
+        x1="0"
+        y1="0"
+        x2="200"
+        y2="100"
+        style="stroke: #000000; stroke-width: 5"
+      />
+    </svg>
+    <br />
+    <br />
+
+    <h1>Elipse with Gradient</h1>
+    <svg id="" height="200" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="100" cy="50" rx="100" ry="50" fill="pink" />
+    </svg>
+    <br />
+    <br />
+
+    <h1>poligon</h1>
+    <svg id="" height="200" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="20,10 300,20, 170,50" fill="pink" />
+    </svg>
+    <br />
+    <br />
+
+    <h1>Elipse</h1>
+    <svg id="" height="200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient
+          id="elipse-gradient"
+          cx="50%"
+          cy="50%"
+          r="50%"
+          fx="50%"
+          fy="50%"
+        >
+          <stop
+            offset="0%"
+            style="stop-color: rgb(200, 200, 200); stop-opacity: 0"
+          />
+          <stop
+            offset="100%"
+            style="stop-color: rgb(50, 70, 25, 0.8); stop-opacity: 1"
+          />
+        </radialGradient>
+      </defs>
+      <ellipse
+        cx="100"
+        cy="50"
+        rx="100"
+        ry="50"
+        style="fill: url(#elipse-gradient)"
+      />
+    </svg>
+    <br />
+    <br />
+
+    <h1>SVG & JS:</h1>
+    <p>mouse over</p>
+    <svg id="" height="200" xmlns="http://www.w3.org/2000/svg">
+      <circle
+        id="cercle"
+        cx="50"
+        cy="50"
+        r="50"
+        fill="pink"
+        onmouseover="evt.target.setAttribute('opacity', '0.5');"
+        onmouseout="evt.target.setAttribute('opacity','1)');"
+      />
+    </svg>
+
+    <br />
+    <br />
+    <h1>External SVG</h1>
+    <p>iframe below:</p>
+    <iframe src="eye.svg" frameborder="0"></iframe>
+    <p>img below:</p>
+    <img src="eye.svg" alt="" />
+  </body>
+</html>
