@@ -1,0 +1,14 @@
+@mixin button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5em 7em;
+  background-color: azure;
+
+  &:hover {
+    background-color: brown;
+  }
+}
+
+.button {
+  @include button;
+}

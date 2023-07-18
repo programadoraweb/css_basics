@@ -1,0 +1,23 @@
+body {
+  background-color: lightpink;
+}
+
+body .h1 {
+  color: lightpink;
+}
+
+body .p {
+  color: lightpink;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5em 7em;
+  background-color: azure;
+}
+
+.button:hover {
+  background-color: brown;
+}
+/*# sourceMappingURL=style.css.map */

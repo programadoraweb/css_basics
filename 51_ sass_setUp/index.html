@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sass - VS Code Set Up </title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <h1>VS Code Set Up  <small>(easiest option)</small></h1>
+    <ol>
+      <li>enable Live Sass Compiler extension on Vs Code</li>
+      <li>create a SCSS folder</li>
+      <li>create style.scss or main.scss file</li>
+      <li>
+        click on Watch Sass on the bottom bar to generate a style.css or
+        main.css file
+      </li>
+      <p>if the watch sass does not appers, update your extension</p>
+      <p></p>
+        if the style.css/ main.css file is generated inside the same folder
+        (scss) as the .scss files, you can change the configuration on VS Code
+        Settings + Extensions + Live Sass Compile Configuration + Live Sass
+        Compile Settings: Formtas + Edit in settings.json & change "savePath":
+        from "null" to "/css". So nexta time you save a file the .css will be
+        generated inside the css folder.
+      </p>
+      <li>
+        You will write your code on main.scss and it will appear on css folder automatically 
+      </li>
+    </ol>
+    <hr/>
+    <h1>Command Line Set Up <small>(npm option)</small> </h1>
+    <ol>
+      <li>check you have npm installed</li>
+      <li>npm install -g node-sass</li>
+      <li><strong>to compile: </strong> node-sass -w scss -o css</li>
+      <small>(inside the scss file you write on the bash)</small>
+    </ol>
+    <hr />
+    <h1>Document Structure</h1>
+    <ol>
+      <li>SCSS folder</li>
+      <li>COMPONENTS folder inside scss</li>
+      <li>
+         _fileName.scss with pieces of code eg. _colors.scss; _mixins.css
+        or abstracts.css
+      </li>
+      <li>style.scss or main.scss to @import "_filename.scss"</li>
+    </ol>
+    <hr>
+    <button class="button">button</button>
+  </body>
+</html>

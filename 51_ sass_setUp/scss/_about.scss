@@ -1,0 +1,12 @@
+$color: lightpink;
+
+body {
+  background-color: $color;
+
+  .h1 {
+    color: $color;
+  }
+  .p {
+    color: $color;
+  }
+}
