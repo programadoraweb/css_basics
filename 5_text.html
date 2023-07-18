@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text</title>
+    <style>
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        font-size: 2.1rem;
+      }
+      div {
+        border: 1px solid brown;
+        margin: 20px;
+      }
+      .left {
+        text-align: left;
+        font-size: 20px;
+        margin-bottom: 50px;
+      }
+      .right {
+        text-align: right;
+        font-size: 20px;
+        margin-bottom: 50px;
+      }
+      .center {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 50px;
+      }
+      .justified {
+        text-align: justify;
+        font-size: 20px;
+        margin-bottom: 50px;
+      }
+
+      .lineThrough {
+        text-decoration: line-through;
+        text-decoration-color: blue;
+        text-decoration-style: dotted;
+        color: red;
+      }
+      .overline {
+        text-decoration: overline;
+        text-decoration-color: blue;
+        color: red;
+      }
+      .underline {
+        text-decoration: underline;
+        text-decoration-color: red;
+        color: blue;
+      }
+      .uppercase {
+        text-transform: uppercase;
+      }
+      .lowercase {
+        text-transform: lowercase;
+      }
+      .capitalize {
+        text-transform: capitalize;
+      }
+      .initial {
+        text-transform: initial; /* back to normal, default */
+      }
+      .rtl {
+        direction: rtl; /* right to left  */
+      }
+      .ltr {
+        direction: ltr; /* left to right - default  */
+      }
+      .text-indent {
+        text-indent: 2em;
+      }
+      .text-align-last-justify {
+        text-align-last: justify;
+        /* avoid to use justify */
+      }
+      .text-align-last-right {
+        text-align-last: right;
+      }
+      .text-align-last-left {
+        text-align-last: left;
+      }
+      .text-align-last-center {
+        text-align-last: center;
+      }
+      .text-overflow-clip {
+        text-overflow: clip;
+        width: 200px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .text-overflow-ellipsis {
+        text-overflow: ellipsis;
+        width: 200px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .text-columns {
+        background-color: #0ff;
+        padding: 50px;
+        box-shadow: 5px 5px 5px rgba(25, 25, 25, 0.4);
+        column-count: 3;
+        column-gap: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Text Alignment</h1>
+    <div>
+      <p class="left">
+        <strong>Text Alignment Left </strong>
+        Text Alignment Left Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Aut accusamus ipsum molestiae asperiores temporibus praesentium
+        sunt assumenda est, aliquam possimus vitae hic illo dolor ad ullam minus
+        psum dolor sit amet consectetur adipisicing elit. Aut accusamus ipsum
+        molestiae asperiores temporibus praesentium sunt assumenda est,
+        alssumenda est, al
+      </p>
+
+      <p class="justified">
+        <strong
+          >Text Alignment Justified
+          <small> - avoid to use justify</small></strong
+        >
+        Text Alignment Justified Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Aut accusamus ipsum molestiae asperiores temporibus
+        praesentium sunt assumenda est, aliquam possimus vitae hic illo dolor ad
+        ullam minus psum dolor sit amet consectetur adipisicing elit. Aut
+        accusamus ipsum molestiae asperiores temporibus praesentium sunt
+        assumenda est, alssumenda est, al
+      </p>
+
+      <p class="right">
+        <strong>Text Alignment Right </strong>
+        Text Alignment Right Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Aut accusamus ipsum molestiae asperiores temporibus praesentium
+        sunt assumenda est, aliquam possimus vitae hic illo dolor ad ullam minus
+        psum dolor sit amet consectetur adipisicing elit. Aut accusamus ipsum
+        molestiae asperiores temporibus praesentium sunt assumenda est,
+        alssumenda est, al
+      </p>
+
+      <p class="center">
+        <strong>Text Alignment Center </strong>
+        Text Alignment Center Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Aut accusamus ipsum molestiae asperiores temporibus praesentium
+        sunt assumenda est, aliquam possimus vitae hic illo dolor ad ullam minus
+        psum dolor sit amet consectetur adipisicing elit. Aut accusamus ipsum
+        molestiae asperiores temporibus praesentium sunt assumenda est,
+        alssumenda est, al
+      </p>
+    </div>
+    <h1>Text Decoration</h1>
+    <div class="text-decoration">
+      <p class="lineThrough">Text Decoration Line Through</p>
+      <p class="underline">Text Decoration Underline</p>
+      <p class="overline">Text Decoration Overline</p>
+    </div>
+    <h1>Text Transform</h1>
+    <div class="text-transform">
+      <p class="uppercase">
+        original text has not been written with upper case letters
+      </p>
+      <p class="lowercase">
+        ORIGINAL TEXT WAS WRITTEN WITH CAPITAL LETTERS, NOW THEY ARE SMALL
+      </p>
+      <p class="capitalize">original text was not capitalized at all.</p>
+      <p class="initial">original with initial property.</p>
+    </div>
+    <h1>Text Direction</h1>
+    <div class="text-direction">
+      <p class="rtl">TEXT DIRECTION RIGHT TO LEFT</p>
+      <p class="ltr">TEXT DIRECTION LEFT TO RIGHT</p>
+      <p><input type="text" class="rtl" value="First Name" /></p>
+      <p><input type="text" class="ltr" value="First Name" /></p>
+    </div>
+    <h1>Text Indent</h1>
+    <div class="text-indent">
+      <p>
+        <strong>TEXT INDEN</strong> T Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Libero quod ad laboriosam, facere non ab enim in,
+        dolore eaque earum repellendus? Voluptate veniam vitae quidem tenetur
+        ipsam ex saepe amet.
+      </p>
+    </div>
+    <h1>Text Align Last</h1>
+    <div class="text-align-last">
+      <p class="text-align-last-justify">
+        <strong>Text Align Last JUSTIFY</strong> T Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Libero quod ad laboriosam, facere non ab
+        enim in, dolore eaque earum repellendus? Voluptate veniam vitae quidem
+        tenetur ipsam ex saepe amet.
+      </p>
+      <p class="text-align-last-right">
+        <strong>Text Align Last RIGHT</strong> T Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Libero quod ad laboriosam, facere non ab
+        enim in, dolore eaque earum repellendus? Voluptate veniam vitae quidem
+        tenetur ipsam ex saepe amet.
+      </p>
+      <p class="text-align-last-left">
+        <strong>Text Align Last LEFT</strong> T Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Libero quod ad laboriosam, facere non ab
+        enim in, dolore eaque earum repellendus? Voluptate veniam vitae quidem
+        tenetur ipsam ex saepe amet.
+      </p>
+      <p class="text-align-last-center">
+        <strong>Text Align Last CENTER</strong> T Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Libero quod ad laboriosam, facere non ab
+        enim in, dolore eaque earum repellendus? Voluptate veniam vitae quidem
+        tenetur ipsam ex saepe amet.
+      </p>
+    </div>
+    <h1>Text Overflow</h1>
+    <div class="text-overflow">
+      <div class="text-overflow-clip">
+        <strong>Text Overflow CLIP</strong> T Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Libero quod ad laboriosam, facere non ab
+        enim in, isicing elit. Libero quod ad laboriosam, facere non ab enim in,
+        dolisicing elit. Libero quod ad laboriosam, facere non ab enim in,
+        dolore eaque earum repellendus? Voluptate veniam vitae quidem tenetur
+        ipsam ex saepe amet. tenetur ipsam isicing elit.isicing elit. Libero
+        quod ad laboriosam, facere non abenim in, dolore eaque earum
+        repellendus? Voluptate veniam vitae quidem tenetur ipsam ex saepe amet.
+      </div>
+      <div class="text-overflow-ellipsis">
+        <strong>Text Overflow ELLIPSIS</strong> T Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Libero quod ad laboriosam, facere non ab
+        enim in, dolore eaque earum repellendus? Voluptate veniam vitae quidem
+        tenetur ipsam isicing elit.isicing elit. Libero quod ad laboriosam,
+        facere non ab tenetur ipsam isicing elit.isicing elit. Libero quod ad
+        laboriosam, facere non abenim in, dolore eaque earum repellendus?
+        Voluptate veniam vitae quidem tenetur ipsam ex saepe amet. enim in,
+        dolore eaque earum repellendus? Voluptate veniam vitae quidem tenetur
+        ipsam ex saepe amet.
+      </div>
+    </div>
+    <h1>Text with Columns</h1>
+    <div class="text-columns">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ab
+      eum nobis enim quo nisi voluptas quas illum rem quaerat veritatis sapiente
+      libero voluptatum tempora expedita nulla quia, porro velit? Lorem ipsum,
+      dolor sit amet consectetur adipisicing elit. Similique ut sequi corporis
+      excepturi maiores, unde temporibus itaque soluta iusto, culpa minima
+      exercitationem iste officiis magni error voluptatibus veniam quaerat
+      dolor!Lorem orem ipsum dolor sit amet consectetur adipisicing elit.
+      Repudiandae ab eum nobis enim quo nisi voluptas quas illum rem quaerat
+      veritatis sapiente libero voluptatum tempora expedita nulla quia, porro
+      velit? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique
+      ut sequi corporis excepturi maiores, unde temporibus itaque soluta iusto,
+      culpa minima exercitationem iste officiis magni error voluptatibus veniam
+      quaerat dolor!Lorem
+    </div>
+  </body>
+</html>
