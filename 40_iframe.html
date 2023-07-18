@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iframe</title>
+    <style>
+      main {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        background-color: palevioletred;
+      }
+      .parent {
+        flex-basis: 50%;
+        flex-shrink: 0;
+        padding: 10px 20px;
+        background-color: burlywood;
+      }
+
+      .child {
+        position: relative;
+        overflow: hidden;
+        background-color: aquamarine;
+      }
+
+      /* 16x9: YouTube; */
+      /* we devide the aspect ratio (height by width of the device eg. 9/16 = 0.562)  */
+      .size-16x9 {
+        padding-bottom: 56.25%;
+      }
+
+      /* 4x3 Older Devices*/
+      /*    .size-4x3 {
+        padding-bottom: 75%;
+      } */
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="parent">
+        <h1>I frame Title</h1>
+        <p>paragraph</p>
+        <div class="child size-16x9">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/j_8sr8Suv2c"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
